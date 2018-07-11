@@ -85,8 +85,8 @@
 						<div class="profile-usertitle-name"><?php echo $_SESSION['SSodienthoai']; ?></div>
 					</div>
 					<div class="profile-userbuttons">
-						<a href="main.php?c=8"><strong>Cập Nhật</strong></a>&nbsp;&nbsp;
-						<a href="../../../../../project-web-c1706l/views/backend/dangnhap/dangxuat.php"><strong>Đăng xuất</strong></a>
+						<a href="main.php?c=103"><strong>Cập Nhật</strong></a>&nbsp;&nbsp;
+						<a href="../../../../../Web-Hoa-Project/views/backend/Admin/dangxuat.php"><strong>Đăng xuất</strong></a>
 					</div>
 				</div>
 			</div>

@@ -57,12 +57,12 @@ Email='$email',SoDienThoai='$phone' WHERE MaNhanVien = '$id'";
 			   align="center"></p>
 			<div class="login-wrap">
 				Họ Và Tên: <input type="text" value="<?php echo $_SESSION['SHoTen']; ?>" name="hovatenmoi"
-								  class="form-control" id="fullname" placeholder="H? v� t�n" autofocus>
+								  class="form-control" id="fullname" placeholder="Họ Và Tên" autofocus>
 				<br>
 				<div id="kiemtraname"></div>
 				<br>
 				Tên Đăng Nhập: <input type="text" value="<?php echo $_SESSION['Stendangnhap']; ?>" name="tendangnhapmoi"
-									  class="form-control" id="username" placeholder="T�n dang nh?p"
+									  class="form-control" id="username" placeholder="Tên Đăng Nhập"
 									  autofocus>
 				<br>
 				<div id="kiemtrauser"></div>
@@ -73,12 +73,12 @@ Email='$email',SoDienThoai='$phone' WHERE MaNhanVien = '$id'";
 				<div id="kiemtrapass"></div>
 				<br>
 				Email: <input type="email" value="<?php echo $_SESSION['SEmail']; ?>" name="emailmoi"
-							  class="form-control" id="email" placeholder="�?a ch? email" autofocus>
+							  class="form-control" id="email" placeholder="Địa Chỉ Email" autofocus>
 				<br>
 				<div id="kiemtraemail"></div>
 				<br>
 				Số Điện Thoại: <input type="text" value="<?php echo $_SESSION['SSodienthoai']; ?>" name="sodienthoaimoi"
-									  class="form-control" id="numberphone" placeholder="S? di?n tho?i"
+									  class="form-control" id="numberphone" placeholder="Số Điện Thoại"
 									  autofocus>
 				<br>
 				<div id="kiemtraphone"></div>

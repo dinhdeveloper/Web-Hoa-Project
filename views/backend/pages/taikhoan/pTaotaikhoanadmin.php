@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    include '../../../../libs/database.php';
+
     if (isset($_POST['dangky'])) {
         $fullname = $_POST['hovaten'];
         $username = $_POST['tendangnhap'];
@@ -27,7 +26,7 @@
                 $errors[] = 'Kích cỡ file nên là 2 MB';
             }
             if (empty($errors) == true) {
-                move_uploaded_file($file_tmp, "../../../backend/modules/logo/" . $file_name);
+                move_uploaded_file($file_tmp, "../backend/modules/logo/" . $file_name);
             } else {
                 print_r($errors);
             }
@@ -45,7 +44,7 @@
             $result = DataProvider::ExecuteQuery($sql1);
             if ($result) {
                 echo '<script>alert("Đăng ký thành công")</script>';
-                //header("location: ../../dangnhap/dangnhapadmin.php");
+                //header("location: ../../Admin/dangnhapadmin.php");
             } else {
                 echo '<script>alert("Đăng ký không thành công")</script>';
             }
@@ -148,7 +147,7 @@
 <div id="login-page">
 	<div class="container">
 		<form class="form-login" action="" method="post" enctype="multipart/form-data">
-			<h2 class="form-login-heading"><strong>ĐĂNG KÝ</strong></h2>
+			<h4 class="form-login-heading"><strong>ĐĂNG KÝ</strong></h4>
 			<p style="color:#F00; padding-top:20px;"
 			   align="center"></p>
 			<div class="login-wrap">
@@ -179,10 +178,8 @@
 				<br>
 				<div id="kiemtraimg"></div>
 				<br>
-				<button type="submit" class="btn btn-primary" name="dangky"
-						style="margin-left: 200px">Đăng Ký
-				</button>
-				<a href="../../../backend/dangnhap/index.php"><strong>Quay lại đăng nhập</strong></a>
+				<button type="submit" class="btn btn-primary" name="dangky">Đăng Ký</button>
+<!--				<a href="../../Admin/index.php"><strong>Quay lại đăng nhập</strong></a>-->
 			</div>
 		</form>
 	</div>
