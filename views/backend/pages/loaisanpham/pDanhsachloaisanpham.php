@@ -33,10 +33,10 @@
 					<th scope="row" style="padding-left: 50px"><?php echo $row["MaLoaiSanPham"]; ?></th>
 					<td><img src="../../images/sanpham/<?php echo $row["HinhMinhHoaLSP"]; ?>"
 							 style="width: 80px;height: 80px"></td>
-					<td><a href="main.php?c=5&id=<?php echo $row["MaLoaiSanPham"]?>"><?php echo $row["TenLoaiSanPham"]; ?></a></td>
+					<td><a href="main.php?c=204&id=<?php echo $row["MaLoaiSanPham"]?>"><?php echo $row["TenLoaiSanPham"]; ?></a></td>
 					<td><?php echo $row["NgayNhap"]; ?></td>
 					<td style="padding-left: 40px"><?php echo $row["BiXoa"]; ?></td>
-					<td><a href="main.php?c=5&id=<?php echo $row["MaLoaiSanPham"]?>"><img src="../../images/icon/text.png"></a></td>
+					<td><a href="main.php?c=204&id=<?php echo $row["MaLoaiSanPham"]?>"><img src="../../images/icon/text.png"></a></td>
 				</tr>
                 <?php
             }

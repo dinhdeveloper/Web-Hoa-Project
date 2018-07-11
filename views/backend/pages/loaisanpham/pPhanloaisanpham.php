@@ -97,7 +97,7 @@
             }
         ?>
     </table>
-	<a href="main.php?c=3">Quay lại</a>
+	<a href="main.php?c=201">Quay lại</a>
 </form>
 <br>
 <br>

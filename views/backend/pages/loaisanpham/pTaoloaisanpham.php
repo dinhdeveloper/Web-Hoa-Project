@@ -28,7 +28,7 @@
             $result = DataProvider::ExecuteQuery($sql);
             if ($result) {
                 echo '<script>alert("Tạo LSP thành công")</script>';
-                //header("location: ../../dangnhap/dangnhapadmin.php");
+                //header("location: ../../Admin/dangnhapadmin.php");
             } else {
                 echo '<script>alert("Tạo LSP không thành công")</script>';
             }
