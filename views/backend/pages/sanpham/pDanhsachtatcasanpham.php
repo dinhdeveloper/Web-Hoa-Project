@@ -134,7 +134,7 @@
 						if ($i == $current_page) {
 							echo '<li class="page-item active"><a class="page-link" href="#">' . $i . '</a></li>';
 						} else {
-							echo '<li class="page-item"><a class="page-link" href="main.php?c=4&page=' . $i . '">' . $i . '</a></li>';
+							echo '<li class="page-item"><a class="page-link" href="main.php?c=301&page=' . $i . '">' . $i . '</a></li>';
 						}
 					}
 				?>

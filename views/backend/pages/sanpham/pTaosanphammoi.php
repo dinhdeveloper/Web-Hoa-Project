@@ -30,7 +30,7 @@
      		$result = DataProvider::ExecuteQuery($sql);
             if ($result) {
                 echo '<script>alert("Tạo SP thành công")</script>';
-                //header("location: ../../dangnhap/dangnhapadmin.php");
+                //header("location: ../../Admin/dangnhapadmin.php");
             } else {
                 echo '<script>alert("Tạo SP không thành công")</script>';
             }
