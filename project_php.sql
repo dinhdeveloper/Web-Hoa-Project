@@ -2,10 +2,10 @@
 -- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 06, 2018 at 07:00 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th7 11, 2018 lúc 09:07 PM
+-- Phiên bản máy phục vụ: 10.1.33-MariaDB
+-- Phiên bản PHP: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project_php`
+-- Cơ sở dữ liệu: `project_php`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietdondathang`
+-- Cấu trúc bảng cho bảng `chitietdondathang`
 --
 
 CREATE TABLE `chitietdondathang` (
@@ -37,7 +37,7 @@ CREATE TABLE `chitietdondathang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `chitietdondathang`
+-- Đang đổ dữ liệu cho bảng `chitietdondathang`
 --
 
 INSERT INTO `chitietdondathang` (`MaChiTietDonDatHang`, `MaDonDatHang`, `MaSanPham`, `SoLuong`, `GiaBan`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `chitietdondathang` (`MaChiTietDonDatHang`, `MaDonDatHang`, `MaSanPh
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dondathang`
+-- Cấu trúc bảng cho bảng `dondathang`
 --
 
 CREATE TABLE `dondathang` (
@@ -90,7 +90,7 @@ CREATE TABLE `dondathang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `dondathang`
+-- Đang đổ dữ liệu cho bảng `dondathang`
 --
 
 INSERT INTO `dondathang` (`MaDonDatHang`, `MaKhachHang`, `NgayDatHang`, `TongThanhTien`, `MaTinhTrangDonDatHang`, `MaNhanVien`) VALUES
@@ -120,7 +120,7 @@ INSERT INTO `dondathang` (`MaDonDatHang`, `MaKhachHang`, `NgayDatHang`, `TongTha
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khachhang`
+-- Cấu trúc bảng cho bảng `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -132,7 +132,7 @@ CREATE TABLE `khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `khachhang`
+-- Đang đổ dữ liệu cho bảng `khachhang`
 --
 
 INSERT INTO `khachhang` (`MaKhachHang`, `HoTen`, `DiaChi`, `SoDienThoai`, `BiXoa`) VALUES
@@ -153,7 +153,7 @@ INSERT INTO `khachhang` (`MaKhachHang`, `HoTen`, `DiaChi`, `SoDienThoai`, `BiXoa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaisanpham`
+-- Cấu trúc bảng cho bảng `loaisanpham`
 --
 
 CREATE TABLE `loaisanpham` (
@@ -165,7 +165,7 @@ CREATE TABLE `loaisanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Dumping data for table `loaisanpham`
+-- Đang đổ dữ liệu cho bảng `loaisanpham`
 --
 
 INSERT INTO `loaisanpham` (`MaLoaiSanPham`, `HinhMinhHoaLSP`, `TenLoaiSanPham`, `NgayNhap`, `BiXoa`) VALUES
@@ -186,7 +186,7 @@ INSERT INTO `loaisanpham` (`MaLoaiSanPham`, `HinhMinhHoaLSP`, `TenLoaiSanPham`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nhanvien`
+-- Cấu trúc bảng cho bảng `nhanvien`
 --
 
 CREATE TABLE `nhanvien` (
@@ -197,20 +197,23 @@ CREATE TABLE `nhanvien` (
   `HoTen` varchar(45) CHARACTER SET utf8 NOT NULL,
   `Email` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `SoDienThoai` varchar(11) CHARACTER SET utf8 DEFAULT NULL,
-  `BiXoa` int(11) NOT NULL DEFAULT '0'
+  `BiXoa` int(11) NOT NULL DEFAULT '0',
+  `QuyenNguoiDung` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `nhanvien`
+-- Đang đổ dữ liệu cho bảng `nhanvien`
 --
 
-INSERT INTO `nhanvien` (`MaNhanVien`, `HinhNhanVien`, `TenDangNhap`, `MatKhau`, `HoTen`, `Email`, `SoDienThoai`, `BiXoa`) VALUES
-(28, 'dinh.jpg', 'canhdinh', '123123', 'Trần Cảnh Dinh', 'dinhtrancntt@gmail.com', '0975469232', 0);
+INSERT INTO `nhanvien` (`MaNhanVien`, `HinhNhanVien`, `TenDangNhap`, `MatKhau`, `HoTen`, `Email`, `SoDienThoai`, `BiXoa`, `QuyenNguoiDung`) VALUES
+(0, 'avatar-16.png', 'admin', 'admin', 'Quản Trị', 'admin@gmail.com', '0123456789', 0, 0),
+(28, 'dinh.jpg', 'canhdinh', '123123', 'Trần Cảnh Dinh', 'dinhtrancntt@gmail.com', '0975469232', 0, 1),
+(29, 'avatar-14.png', 'kimanh', '123123', 'Trần Thị Kim Anh', 'kimanh@gmail.com', '01664378342', 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sanpham`
+-- Cấu trúc bảng cho bảng `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -228,7 +231,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `sanpham`
+-- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
 INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `MaLoaiSanPham`, `Gia`, `NgayNhap`, `SoLuongTon`, `SoLuongBan`, `SoLuotXem`, `BiXoa`, `MoTa`, `HinhURL`) VALUES
@@ -340,7 +343,7 @@ INSERT INTO `sanpham` (`MaSanPham`, `TenSanPham`, `MaLoaiSanPham`, `Gia`, `NgayN
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tinhtrangdondathang`
+-- Cấu trúc bảng cho bảng `tinhtrangdondathang`
 --
 
 CREATE TABLE `tinhtrangdondathang` (
@@ -349,7 +352,7 @@ CREATE TABLE `tinhtrangdondathang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `tinhtrangdondathang`
+-- Đang đổ dữ liệu cho bảng `tinhtrangdondathang`
 --
 
 INSERT INTO `tinhtrangdondathang` (`MaTinhTrangDonDatHang`, `TenTinhTrangDonDatHang`) VALUES
@@ -360,11 +363,11 @@ INSERT INTO `tinhtrangdondathang` (`MaTinhTrangDonDatHang`, `TenTinhTrangDonDatH
 (5, 'Hủy');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `chitietdondathang`
+-- Chỉ mục cho bảng `chitietdondathang`
 --
 ALTER TABLE `chitietdondathang`
   ADD PRIMARY KEY (`MaChiTietDonDatHang`),
@@ -372,7 +375,7 @@ ALTER TABLE `chitietdondathang`
   ADD KEY `fk_ChiTietDonDatHang_SanPham1_idx` (`MaSanPham`);
 
 --
--- Indexes for table `dondathang`
+-- Chỉ mục cho bảng `dondathang`
 --
 ALTER TABLE `dondathang`
   ADD PRIMARY KEY (`MaDonDatHang`),
@@ -381,95 +384,95 @@ ALTER TABLE `dondathang`
   ADD KEY `fk_DonDatHang_NhanVien1_idx` (`MaNhanVien`);
 
 --
--- Indexes for table `khachhang`
+-- Chỉ mục cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`MaKhachHang`);
 
 --
--- Indexes for table `loaisanpham`
+-- Chỉ mục cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   ADD PRIMARY KEY (`MaLoaiSanPham`);
 
 --
--- Indexes for table `nhanvien`
+-- Chỉ mục cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
   ADD PRIMARY KEY (`MaNhanVien`);
 
 --
--- Indexes for table `sanpham`
+-- Chỉ mục cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`MaSanPham`),
   ADD KEY `fk_SanPham_LoaiSanPham_idx` (`MaLoaiSanPham`);
 
 --
--- Indexes for table `tinhtrangdondathang`
+-- Chỉ mục cho bảng `tinhtrangdondathang`
 --
 ALTER TABLE `tinhtrangdondathang`
   ADD PRIMARY KEY (`MaTinhTrangDonDatHang`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `chitietdondathang`
+-- AUTO_INCREMENT cho bảng `chitietdondathang`
 --
 ALTER TABLE `chitietdondathang`
   MODIFY `MaChiTietDonDatHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `dondathang`
+-- AUTO_INCREMENT cho bảng `dondathang`
 --
 ALTER TABLE `dondathang`
   MODIFY `MaDonDatHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `khachhang`
+-- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   MODIFY `MaKhachHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `loaisanpham`
+-- AUTO_INCREMENT cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   MODIFY `MaLoaiSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `nhanvien`
+-- AUTO_INCREMENT cho bảng `nhanvien`
 --
 ALTER TABLE `nhanvien`
-  MODIFY `MaNhanVien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `MaNhanVien` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `sanpham`
+-- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `MaSanPham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
--- AUTO_INCREMENT for table `tinhtrangdondathang`
+-- AUTO_INCREMENT cho bảng `tinhtrangdondathang`
 --
 ALTER TABLE `tinhtrangdondathang`
   MODIFY `MaTinhTrangDonDatHang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `chitietdondathang`
+-- Các ràng buộc cho bảng `chitietdondathang`
 --
 ALTER TABLE `chitietdondathang`
   ADD CONSTRAINT `fk_ChiTietDonDatHang_DonDatHang1` FOREIGN KEY (`MaDonDatHang`) REFERENCES `dondathang` (`MaDonDatHang`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_ChiTietDonDatHang_SanPham1` FOREIGN KEY (`MaSanPham`) REFERENCES `sanpham` (`MaSanPham`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `dondathang`
+-- Các ràng buộc cho bảng `dondathang`
 --
 ALTER TABLE `dondathang`
   ADD CONSTRAINT `fk_DonDatHang_KhachHang1` FOREIGN KEY (`MaKhachHang`) REFERENCES `khachhang` (`MaKhachHang`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -477,7 +480,7 @@ ALTER TABLE `dondathang`
   ADD CONSTRAINT `fk_DonDatHang_TinhTrangDonDatHang1` FOREIGN KEY (`MaTinhTrangDonDatHang`) REFERENCES `tinhtrangdondathang` (`MaTinhTrangDonDatHang`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `sanpham`
+-- Các ràng buộc cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `fk_SanPham_LoaiSanPham` FOREIGN KEY (`MaLoaiSanPham`) REFERENCES `loaisanpham` (`MaLoaiSanPham`) ON DELETE NO ACTION ON UPDATE NO ACTION;
